@@ -1,0 +1,164 @@
+/* ================== GENERAL STYLES ================== */
+
+:root {
+  line-height: 1.5;
+  font-size: 62.5%;
+  color-scheme: light dark;
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, h1, h2, h3, h4, p, input, button {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Karla, sans-serif;
+  color: #fff;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+/* ================== HEADER ================== */
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+}
+
+header img {
+  display: block;
+  order: -1;
+  height: 30px;
+  object-fit: cover;
+  object-position: center;
+}
+
+header h2 {
+  font-size: 2rem;
+  margin-inline: .5rem auto;
+}
+
+header h4 {
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+}
+
+header h4, .text-field {
+  font-size: 1.2rem;
+}
+
+/* ================== MAIN  ================== */
+main {
+  padding: 3.6em;
+}
+
+main form, .text-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.text-field, .get-meme-btn, .meme-img {
+  width: 100%;
+}
+
+.text-field {
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  background: none;
+}
+
+.text-field, .get-meme-btn {
+  padding: .8em;
+  outline: none;
+}
+
+.text-field:focus {
+  border: 1px solid #A626D3;
+}
+
+.get-meme-btn {
+  font-size: 1.6rem;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #711F8D 1.14%, #A818DA 100%);
+  border: none;
+  cursor: pointer;
+}
+
+.meme-cntr {
+  position: relative;
+  margin-top: 5em;
+}
+
+.meme-text {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  text-align: center;
+  font-family: Impact;
+  font-size: 3.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #000,
+              -2px -2px 0 #000,
+              2px -2px 0 #000,
+              -2px 2px 0 #000,
+              0 2px 0 #000,
+              2px 0 0 #000,
+              0 -2px 0 #000,
+              -2px 0 0 #000,
+              2px 2px 5px #000;
+}
+
+.meme-text:first-of-type {
+  top: 1.6rem;
+}
+.meme-text:last-of-type {
+  bottom: 1.6rem;
+}
+
+/* ================== FOOTER ================== */
+footer {
+  padding-block: 1em;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+/* ================== MEDIA QUERIES ================== */
+@media screen and (min-width: 768px) {
+  .container {
+      width: 50svw;
+  }
+
+  .text-fields {
+    flex-direction: row;
+  }
+
+  header h2 {
+    font-size: 2.2rem;
+  }
+
+  header h4, .text-field, footer {
+    font-size: 1.5rem;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    background-color: #e1e1e1;
+  }
+
+  .text-field, footer {
+    color: #213547;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
